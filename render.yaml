@@ -1,6 +1,6 @@
 services:
   - type: web
     name: wingo-multitimeframe-bot
-    runtime: python
-    buildCommand: "pip install flask gunicorn"
-    startCommand: "gunicorn main:app"
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
